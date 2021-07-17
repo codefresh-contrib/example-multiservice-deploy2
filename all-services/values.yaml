@@ -3,4 +3,4 @@ global:
     tags:
       buslog: main-c4d2fd5
       ctrlr: main-f505305
-      flask-ui: main-f505305
+      flaskui: main-f505305
