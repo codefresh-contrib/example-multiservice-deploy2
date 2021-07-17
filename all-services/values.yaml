@@ -1,6 +1,0 @@
-global:
-  image:
-    tags:
-      buslog: main-f505305
-      ctrlr: main-f505305
-      flask-ui: main-f505305
