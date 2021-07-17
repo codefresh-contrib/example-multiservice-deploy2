@@ -1,0 +1,12 @@
+dependencies:
+- name: buslog
+  repository: cm://h.cfcr.io/codefreshdemo/default
+  version: 1.1.0
+- name: ctrlr
+  repository: cm://h.cfcr.io/codefreshdemo/default
+  version: 1.0.0
+- name: flask-ui
+  repository: cm://h.cfcr.io/codefreshdemo/default
+  version: 1.0.0
+digest: sha256:50ddce95926660f15fe5ad0a057b722f4e10e6050547faa99a9267608f82013d
+generated: "2021-07-16T22:32:26.723989-04:00"

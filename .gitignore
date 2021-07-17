@@ -1,0 +1,2 @@
+# Ignore cached chart packages
+all-services/charts/**
