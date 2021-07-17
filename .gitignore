@@ -1,2 +1,3 @@
 # Ignore cached chart packages
 all-services/charts/**
+all-services/Chart.lock
