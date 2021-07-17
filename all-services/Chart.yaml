@@ -2,14 +2,14 @@ apiVersion: v2
 name: all-services
 description: A Helm chart for Kubernetes
 type: application
-version: 0.1.0
+version: 0.1.1
 dependencies:
-- name: buslog
-  version: "1.1.0"
-  repository: "cm://h.cfcr.io/codefreshdemo/default"
-- name: ctrlr
-  version: "1.0.0"
-  repository: "cm://h.cfcr.io/codefreshdemo/default"
-- name: flask-ui
-  version: "1.0.0"
-  repository: "cm://h.cfcr.io/codefreshdemo/default"
+  - name: buslog
+    version: "1.1.1"
+    repository: "cm://h.cfcr.io/codefreshdemo/default"
+  - name: ctrlr
+    version: "1.0.0"
+    repository: "cm://h.cfcr.io/codefreshdemo/default"
+  - name: flask-ui
+    version: "1.0.0"
+    repository: "cm://h.cfcr.io/codefreshdemo/default"
