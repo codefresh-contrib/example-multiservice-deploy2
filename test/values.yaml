@@ -2,5 +2,5 @@ global:
   image:
     tags:
       buslog: main-4a28596
-      ctrlr: main-3725cf8
+      ctrlr: main-4a28596
       flaskui: main-f505305
