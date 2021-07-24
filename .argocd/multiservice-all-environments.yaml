@@ -1,0 +1,17 @@
+# Parent Argo CD app (grouping) for the flaskr apps
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: multiservice-environments
+  namespace: argo-cd  # All app resources live in the argocd namespace
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+spec:
+  destination:
+    namespace: argo-cd  # App-of-apps should also use argocd for their destination namespace
+    name: in-cluster
+  project: example-multiservice
+  source:
+    path: ./.argocd/apps  # Directory that contains the child apps
+    repoURL: https://github.com/codefresh-contrib/example-multiservice-deploy.git
+    targetRevision: main
