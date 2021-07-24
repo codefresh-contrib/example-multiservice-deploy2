@@ -1,6 +1,6 @@
 # example-multiservice-deploy
 
-Exmaple GitOps deployment repo for corresponding microservice monorepo [example-multiservice](https://github.com/codefresh-contrib/example-multiservice).
+Example GitOps deployment repo for a corresponding microservice monorepo, [example-multiservice](https://github.com/codefresh-contrib/example-multiservice).
 
 Organizes its environments within a single branch (main) using a monorepo structure. Each environment subdirectory contains a single umbrella chart with only 2 files: Chart.yaml and values.yaml. Each environment's microservices/versions are listed as subcharts in the `dependencies` section of its Chart.yaml
 
