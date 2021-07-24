@@ -6,7 +6,7 @@ Organizes its environments within a single branch (main) using a monorepo struct
 
 Features
 
-- Subcharts are backed by a Helm Chart Repo, for much easier version management than Git
+- Subcharts are backed by a Helm Chart Repo, for much easier version management than Git by itself
 - A single branch / monorepo structure makes it easy to automate promotions between environments
 - All image tags can easily be viewed/updated in a single file per environment: the umbrella chart's values.yaml 
 - Quickly and easily see all differences between environments with `diff`, for example `diff test/ qa/`
