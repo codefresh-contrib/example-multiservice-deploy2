@@ -4,7 +4,7 @@ Example GitOps deployment repo for a corresponding microservice monorepo, [examp
 
 Organizes its environments within a single branch (main) using a monorepo structure. Each environment subdirectory contains a single umbrella chart with only 2 files: Chart.yaml and values.yaml. Each environment's microservices/versions are listed as subcharts in the `dependencies` section of its Chart.yaml
 
-Features
+Benefits
 
 - Subcharts are backed by a Helm Chart Repo, for much easier version management than Git by itself
 - A single branch / monorepo structure makes it easy to automate promotions between environments
