@@ -1,6 +1,6 @@
 global:
   image:
     tags:
-      buslog: main-c4d2fd5
+      buslog: main-4a28596
       ctrlr: main-3725cf8
       flaskui: main-f505305
