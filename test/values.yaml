@@ -1,6 +1,9 @@
-global:
+buslog:
   image:
-    tags:
-      buslog: main-4a28596
-      ctrlr: main-4a28596
-      flaskui: main-4a28596
+    tag: main-4a28596
+ctrlr:
+  image:
+    tag: main-4a28596
+flask-ui:
+  image:
+    tag: main-4a28596
