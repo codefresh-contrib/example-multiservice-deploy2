@@ -6,4 +6,4 @@ ctrlr:
     tag: main-4a28596
 flask-ui:
   image:
-    tag: main-4a28596
+    tag: main-7cff170
