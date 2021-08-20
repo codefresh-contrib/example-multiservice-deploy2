@@ -1,9 +1,9 @@
 buslog:
   image:
-    tag: main-c4d2fd5
+    tag: main-4a28596
 ctrlr:
   image:
-    tag: main-f505305
+    tag: ctrlr-update-dockerfile-44ea304
 flask-ui:
   image:
-    tag: main-f505305
+    tag: flask-ui-update-color-scheme-e618ff2
