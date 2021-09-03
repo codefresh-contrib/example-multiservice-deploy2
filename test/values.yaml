@@ -1,6 +1,6 @@
 buslog:
   image:
-    tag: main-4a28596
+    tag: cleanupDockerfile-e6d5950
 ctrlr:
   image:
     tag: ctrlr-update-dockerfile-44ea304
