@@ -1,0 +1,134 @@
+version: '1.0'
+kind: pipeline
+metadata:
+  name: Example Multiservice CI/CD/Multiservice CD
+  project: Example Multiservice CI/CD
+  deprecate: {}
+  shortName: multiservice cd
+  labels:
+    tags: []
+  originalYamlString: ""
+spec:
+  triggers:
+    - name: Test
+      description: Deploy to the Test environment
+      type: git
+      repo: codefresh-contrib/example-multiservice-deploy
+      events:
+        - push.heads
+      pullRequestAllowForkEvents: false
+      commentRegex: /.*/gi
+      branchRegex: /^((main)$).*/gi
+      branchRegexInput: multiselect
+      modifiedFilesGlob: test/**
+      provider: github
+      disabled: false
+      options:
+        noCache: false
+        noCfCache: false
+        resetVolume: false
+      context: github-1
+      contexts: []
+      variables:
+        - key: GIT_PROVIDER_NAME
+          value: github-1
+        - key: ARGOCD_AGENT
+          value: sales-dev-eks-v2-argo-agent
+        - key: ARGOCD_APP_NAME
+          value: multiservice-test
+    - name: QA
+      description: Deploy to the QA environment
+      type: git
+      repo: codefresh-contrib/example-multiservice-deploy
+      events:
+        - push.heads
+      pullRequestAllowForkEvents: false
+      commentRegex: /.*/gi
+      branchRegex: /^((main)$).*/gi
+      branchRegexInput: multiselect
+      modifiedFilesGlob: qa/**
+      provider: github
+      disabled: false
+      options:
+        noCache: false
+        noCfCache: false
+        resetVolume: false
+      context: github-1
+      contexts: []
+      variables:
+        - key: ARGOCD_AGENT
+          value: sales-dev-eks-v2-argo-agent
+        - key: ARGOCD_APP_NAME
+          value: multiservice-qa
+        - key: GIT_PROVIDER_NAME
+          value: github-1
+    - name: Stage
+      description: Deploy to the Stage environment
+      type: git
+      repo: codefresh-contrib/example-multiservice-deploy
+      events:
+        - push.heads
+      pullRequestAllowForkEvents: false
+      commentRegex: /.*/gi
+      branchRegex: /^((main)$).*/gi
+      branchRegexInput: multiselect
+      modifiedFilesGlob: stage/**
+      provider: github
+      disabled: false
+      options:
+        noCache: false
+        noCfCache: false
+        resetVolume: false
+      context: github-1
+      contexts: []
+      variables:
+        - key: ARGOCD_AGENT
+          value: sales-dev-eks-v2-argo-agent
+        - key: ARGOCD_APP_NAME
+          value: multiservice-stage
+        - key: GIT_PROVIDER_NAME
+          value: github-1
+    - name: Prod
+      description: Deploy to the Prod environment
+      type: git
+      repo: codefresh-contrib/example-multiservice-deploy
+      events:
+        - push.heads
+      pullRequestAllowForkEvents: false
+      commentRegex: /.*/gi
+      branchRegex: /^((main)$).*/gi
+      branchRegexInput: multiselect
+      modifiedFilesGlob: prod/**
+      provider: github
+      disabled: false
+      options:
+        noCache: false
+        noCfCache: false
+        resetVolume: false
+      context: github-1
+      contexts: []
+      variables:
+        - key: ARGOCD_AGENT
+          value: sales-dev-eks-v2-argo-agent
+        - key: ARGOCD_APP_NAME
+          value: multiservice-prod
+        - key: GIT_PROVIDER_NAME
+          value: github-1
+  variables: []
+  contexts: []
+  runtimeEnvironment:
+    name: sales-dev-eks-v2/codefresh-components
+    cpu: 800m
+    memory: 1000Mi
+    dindStorage: nullGi
+  terminationPolicy: []
+  externalResources: []
+  specTemplate:
+    location: git
+    repo: codefresh-contrib/example-multiservice-deploy
+    path: ./.codefresh/cd-steps.yaml
+    revision: main
+    context: github-1
+  steps: {}
+  stages: []
+
