@@ -6,4 +6,4 @@ ctrlr:
     tag: ctrlr-update-dockerfile-44ea304
 flask-ui:
   image:
-    tag: flask-ui-update-color-scheme-e618ff2
+    tag: autobotSA-158-f7144f4
