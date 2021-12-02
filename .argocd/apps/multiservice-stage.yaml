@@ -5,6 +5,8 @@ metadata:
   namespace: captest  # All app resources live in the argocd namespace
   finalizers:
     - resources-finalizer.argocd.argoproj.io
+  labels:
+    app: multiservice
 spec:
   destination:
     namespace: multiservice-stage
