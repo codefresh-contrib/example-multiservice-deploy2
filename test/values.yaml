@@ -1,12 +1,13 @@
 buslog:
   image:
-    tag: prepForLogic2.0-cc8cef4
-    # tag: cleanupDockerfile-e6d5950
+    # tag: prepForLogic2.0-cc8cef4
+    tag: cleanupDockerfile-e6d5950
 ctrlr:
   image:
-    tag: ctrlr-update-dockerfile-44ea304
-    # tag: main-4a28596
+    # tag: ctrlr-update-dockerfile-44ea304
+    tag: main-4a28596
 flask-ui:
   image:
-    # tag: flask-ui-update-color-scheme-e618ff2
-    tag: main-7cff170
+    # tag: main-7cff170
+    tag: flask-ui-update-color-scheme-e618ff2
+
