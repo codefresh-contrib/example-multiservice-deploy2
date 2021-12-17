@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: multiservice-prod
-  namespace: captest  # All app resources live in the argocd namespace
+  namespace: csdp01-us-east-2  # All app resources live in the argocd namespace
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   labels:
