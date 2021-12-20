@@ -1,3 +1,6 @@
 # Ignore cached chart packages
 **/charts/**
 **/Chart.lock
+
+# macOS custom attributes file
+.DS_Store

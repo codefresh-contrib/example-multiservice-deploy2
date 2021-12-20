@@ -1,7 +1,7 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: multiservice-test
+  name: multiservice-prod
   namespace: csdp01-us-east-2  # All app resources live in the argocd namespace
   finalizers:
     - resources-finalizer.argocd.argoproj.io
@@ -9,13 +9,13 @@ metadata:
     app: multiservice
 spec:
   destination:
-    namespace: multiservice-test
+    namespace: multiservice-prod
     name: in-cluster
   project: example-multiservice
   source:
     repoURL: https://github.com/codefresh-contrib/example-multiservice-deploy2.git
     targetRevision: main
-    path: test
+    path: flaskr/prod
     helm:
       parameters:
         - name: buildID

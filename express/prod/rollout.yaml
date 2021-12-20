@@ -1,0 +1,27 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: express
+spec:
+  replicas: 4
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app: express
+  template:
+    metadata:
+      labels:
+        app: express
+    spec:
+      containers:
+        - image: 336151728602.dkr.ecr.us-east-1.amazonaws.com/salesdemocf/express-microservice:99d94a2
+          name: express
+          ports:
+            - containerPort: 3000
+  minReadySeconds: 30
+  strategy:
+    canary:
+      steps:
+        - setWeight: 25
+        - setWeight: 25
+        - pause: {}
