@@ -6,12 +6,12 @@ metadata:
   finalizers:
     - resources-finalizer.argocd.argoproj.io
   labels:
-    app: multiservice
+    app: express
 spec:
   destination:
     namespace: express-prod
     name: in-cluster
-  project: example-multiservice
+  project: express
   source:
     repoURL: https://github.com/codefresh-contrib/example-multiservice-deploy2.git
     targetRevision: main
