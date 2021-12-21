@@ -1,7 +1,7 @@
 buslog:
   image:
-    tag: prepForLogic2.0-cc8cef4
-    # tag: cleanupDockerfile-e6d5950
+    # tag: prepForLogic2.0-cc8cef4
+    tag: cleanupDockerfile-e6d5950
 ctrlr:
   image:
     # tag: ctrlr-update-dockerfile-44ea304
