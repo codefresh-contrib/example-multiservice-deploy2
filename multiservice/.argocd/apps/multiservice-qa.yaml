@@ -1,0 +1,24 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: multiservice-qa
+  # namespace: csdp01-us-east-2  # All app resources live in the argocd namespace
+  finalizers:
+    - resources-finalizer.argocd.argoproj.io
+  labels:
+    app: multiservice
+spec:
+  destination:
+    namespace: multiservice-qa
+    name: in-cluster
+  project: multiservice
+  source:
+    repoURL: https://github.com/codefresh-contrib/example-multiservice-deploy2.git
+    targetRevision: main
+    path: multiservice/qa
+    helm:
+      parameters:
+        - name: buildID
+          value: argocd
+      valueFiles:
+        - values.yaml
