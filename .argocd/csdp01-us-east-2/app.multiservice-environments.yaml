@@ -5,12 +5,11 @@ metadata:
   name: multiservice-environments
   labels:
     app: multiservice
-  # namespace: csdp01-us-east-2  # All app resources live in the argocd namespace
   finalizers:
     - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: csdp01-us-east-2  # App-of-apps should also use argocd for their destination namespace
+    namespace: csdp01-us-east-2  # required field - set to your CF Runtume namespace
     name: in-cluster
   project: multiservice
   source:
