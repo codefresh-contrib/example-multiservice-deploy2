@@ -13,6 +13,6 @@ spec:
     name: in-cluster
   project: multiservice
   source:
-    path: ./argocd/apps/multiservice  # Directory that contains the child apps
+    path: ./.argocd/apps/multiservice  # Directory that contains the child apps
     repoURL: https://github.com/codefresh-contrib/example-multiservice-deploy2.git
     targetRevision: main
