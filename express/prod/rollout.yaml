@@ -14,7 +14,7 @@ spec:
         app: express
     spec:
       containers:
-        - image: 336151728602.dkr.ecr.us-east-1.amazonaws.com/salesdemocf/express-microservice:99d94a2
+        - image: 336151728602.dkr.ecr.us-east-1.amazonaws.com/salesdemocf/express-microservice:03a3fc0 # 99d94a2 # d3cb357
           name: express
           ports:
             - containerPort: 3000
