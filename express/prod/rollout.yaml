@@ -14,7 +14,7 @@ spec:
         app: express
     spec:
       containers:
-        - image: codefreshjesse/express-microservice2:ebb4acbc618ee54505a99253333e11abaf7f076b
+        - image: codefreshjesse/express-microservice2:702b2e189d6b2a24e0019eeb6651469f8eb54bac
         #- image: 336151728602.dkr.ecr.us-east-1.amazonaws.com/salesdemocf/express-microservice:03a3fc0 # 99d94a2 # d3cb357
           name: express
           ports:
