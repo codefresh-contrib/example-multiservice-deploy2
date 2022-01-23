@@ -8,5 +8,5 @@ ctrlr:
     tag: main-4a28596
 flask-ui:
   image:
-    tag: main-7cff170
-    # tag: flask-ui-update-color-scheme-e618ff2
+    # tag: main-7cff170
+    tag: flask-ui-update-color-scheme-e618ff2
