@@ -4,8 +4,8 @@ buslog:
     # tag: cleanupDockerfile-e6d5950
 ctrlr:
   image:
-    # tag: ctrlr-update-dockerfile-44ea304
-    tag: main-4a28596
+    tag: ctrlr-update-dockerfile-44ea304
+    # tag: main-4a28596
 flask-ui:
   image:
     # tag: main-7cff170
