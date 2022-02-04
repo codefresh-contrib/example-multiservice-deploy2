@@ -9,4 +9,6 @@ ctrlr:
 flask-ui:
   image:
     # tag: main-7cff170
-    tag: flask-ui-update-color-scheme-e618ff2
+    # tag: flask-ui-update-color-scheme-e618ff2
+    # tag: quay.io/codefresh_sa/flask-ui:310ce88
+    tag: quay.io/codefresh_sa/flask-ui:ada05da
