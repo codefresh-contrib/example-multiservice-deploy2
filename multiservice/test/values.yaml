@@ -10,8 +10,8 @@ ctrlr:
     repository: quay.io/codefresh_sa/ctrlr
     # tag: ctrlr-update-dockerfile-44ea304
     # tag: main-4a28596
-    # tag: 5c41d13
-    tag: 7abe01c
+    tag: 5c41d13
+    # tag: 7abe01c
 flask-ui:
   image:
     repository: quay.io/codefresh_sa/flask-ui
