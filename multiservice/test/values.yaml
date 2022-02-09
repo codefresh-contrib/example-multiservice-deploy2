@@ -17,5 +17,5 @@ flask-ui:
     repository: quay.io/codefresh_sa/flask-ui
     # tag: main-7cff170
     # tag: flask-ui-update-color-scheme-e618ff2
-    # tag: 310ce88
-    tag: ada05da
+    tag: 310ce88
+    # tag: ada05da
