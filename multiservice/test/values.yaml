@@ -5,7 +5,7 @@ buslog:
 ctrlr:
   image:
     repository: quay.io/codefresh_sa/ctrlr
-    tag: 5c41d13
+    tag: 7abe01c
 flask-ui:
   image:
     repository: quay.io/codefresh_sa/flask-ui
