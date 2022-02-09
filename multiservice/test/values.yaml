@@ -1,21 +1,19 @@
 buslog:
   image:
     repository: quay.io/codefresh_sa/buslog
-    # tag: prepForLogic2.0-cc8cef4
-    # tag: cleanupDockerfile-e6d5950
     tag: 13b7cb2
-    # tag: 696b07f
 ctrlr:
   image:
     repository: quay.io/codefresh_sa/ctrlr
-    # tag: ctrlr-update-dockerfile-44ea304
-    # tag: main-4a28596
     tag: 5c41d13
-    # tag: 7abe01c
 flask-ui:
   image:
     repository: quay.io/codefresh_sa/flask-ui
-    # tag: main-7cff170
-    # tag: flask-ui-update-color-scheme-e618ff2
     tag: 310ce88
+
+    # tag: 13b7cb2
+    # tag: 696b07f
+    # tag: 5c41d13
+    # tag: 7abe01c
+    # tag: 310ce88
     # tag: ada05da
