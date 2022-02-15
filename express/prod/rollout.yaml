@@ -15,8 +15,8 @@ spec:
     spec:
       containers:
         #- image: quay.io/jesse_antoszyk/nginx:latest
-        - image: codefreshjesse/express-microservice2:ba63f092d0aebc502e66aef41ac56bf47b751844
-        #- image: 336151728602.dkr.ecr.us-east-1.amazonaws.com/salesdemocf/express-microservice:03a3fc0 # 99d94a2 # d3cb357
+        #- image: codefreshjesse/express-microservice2:ba63f092d0aebc502e66aef41ac56bf47b751844
+        - image: 336151728602.dkr.ecr.us-east-1.amazonaws.com/salesdemocf/express-microservice:03a3fc0 # 99d94a2 # d3cb357
           name: express
           ports:
             - containerPort: 3000
