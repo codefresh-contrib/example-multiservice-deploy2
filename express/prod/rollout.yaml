@@ -27,7 +27,7 @@ spec:
       analysis:
         templates:
         - templateName: pass-always
-        - templateName: mixed-tests
+        # - templateName: mixed-tests
         startingStep: 1 # delay starting analysis run until setWeight: 40%
       steps:
         - setWeight: 25
