@@ -24,7 +24,11 @@ spec:
   minReadySeconds: 30
   strategy:
     canary:
+      analysis:
+        templates:
+        - templateName: pass-always
+        - templateName: mixed-tests
+        startingStep: 1 # delay starting analysis run until setWeight: 40%
       steps:
         - setWeight: 25
-        - setWeight: 25
-        - pause: {}
+        - pause: {duration: 1m}
