@@ -48,7 +48,7 @@ metadata:
 spec:
   metrics:
   - name: pass
-    count: 1
+    count: 5
     interval: 5s
     failureLimit: 1
     provider:
