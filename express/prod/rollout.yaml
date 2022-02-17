@@ -19,7 +19,7 @@ spec:
         # d3cb357 03a3fc0 99d94a2
         #- image: 336151728602.dkr.ecr.us-east-1.amazonaws.com/salesdemocf/express-microservice:03a3fc0
         # 310ce88 ada05da
-        - quay.io/codefresh_sa/flask-ui:310ce88
+        - image: quay.io/codefresh_sa/flask-ui:310ce88
           name: express
           ports:
             # - containerPort: 3000
