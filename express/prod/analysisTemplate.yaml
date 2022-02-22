@@ -7,7 +7,7 @@ metadata:
   name: mixed-tests
 spec:
   metrics:
-  - name: pass
+  - name: pass-2
     count: 2
     interval: 5s
     failureLimit: 1
@@ -47,7 +47,7 @@ metadata:
   name: pass-always
 spec:
   metrics:
-  - name: pass
+  - name: pass-5
     count: 5
     interval: 5s
     failureLimit: 1
