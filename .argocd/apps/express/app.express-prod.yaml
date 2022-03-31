@@ -9,7 +9,7 @@ metadata:
     app: express
 spec:
   destination:
-    namespace: express-prod
+    namespace: csdp01-us-east-2
     name: in-cluster
   project: express
   source:
