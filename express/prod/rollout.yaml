@@ -17,7 +17,7 @@ spec:
         # - image: quay.io/jesse_antoszyk/nginx:latest
         # - image: codefreshjesse/express-microservice2:ba63f092d0aebc502e66aef41ac56bf47b751844
         # d3cb357 03a3fc0 99d94a2
-        - image: 336151728602.dkr.ecr.us-east-1.amazonaws.com/salesdemocf/express-microservice:d3cb357
+        - image: 336151728602.dkr.ecr.us-east-1.amazonaws.com/salesdemocf/express-microservice:03a3fc0
           name: express
           ports:
             - containerPort: 3000
@@ -28,7 +28,8 @@ spec:
         templates:
         - templateName: pass-always
 #         - templateName: mixed-tests
-        startingStep: 1 # delay starting analysis run until setWeight: 40%
+#         startingStep: 1
       steps:
         - setWeight: 25
         - pause: {duration: 1m}
+        
