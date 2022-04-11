@@ -9,7 +9,7 @@ ctrlr:
 flask-ui:
   image:
     repository: quay.io/codefresh_sa/flask-ui
-    tag: 310ce88
+    tag: 13b7cb2
 
     # tag: 13b7cb2
     # tag: 696b07f
