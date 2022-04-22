@@ -39,22 +39,6 @@ spec:
                 args: [FLIP=$(($(($RANDOM%10))%2)) && exit $FLIP]
               restartPolicy: Never
           backoffLimit: 0
-  - name: always-fail
-    count: 1
-    interval: 5s
-    failureLimit: 0
-    provider:
-      job:
-        spec:
-          template:
-            spec:
-              containers:
-              - name: sleep-fail
-                image: alpine:3.8
-                command: [sh, -c]
-                args: [exit 1]
-              restartPolicy: Never
-          backoffLimit: 0
 
 ---
 kind: AnalysisTemplate
