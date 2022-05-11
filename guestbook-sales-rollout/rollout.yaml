@@ -1,0 +1,49 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Rollout
+metadata:
+  name: guestbook-sales-rollout
+spec:
+  replicas: 2
+  revisionHistoryLimit: 2
+  selector:
+    matchLabels:
+      app: guestbook-sales
+  template:
+    metadata:
+      labels:
+        app: guestbook-sales
+    spec:
+      containers:
+#        0.1 , 0.2 , 0.3 - missing (might be used for degraded test)
+        - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
+          name: guestbook-sales
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+  minReadySeconds: 30
+  strategy:
+    canary:
+      analysis:
+        templates:
+          - templateName: background-analysis
+        startingStep: 1
+      steps:
+        - setWeight: 25
+        - pause: {duration: 20s}
+        - analysis:
+            templates:
+            - templateName: prometheus-analysis
+        - setWeight: 75
+        - pause: {duration: 15s}
+        - experiment:
+            duration: 15s
+            templates:
+            - name: canary
+              specRef: canary
+            # This experiment performs its own analysis by referencing one or more AnalysisTemplates
+            # here. The success or failure of these runs will progress or abort the rollout respectively.
+            analyses:
+            - name: random-fail-experiment
+              templateName: experiment-analysis
+              requiredForCompletion: true
