@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
 #        0.1 , 0.2 , 0.3 - missing (might be used for degraded test)
-        - image: gcr.io/heptio-images/ks-guestbook-demo:0.2
+        - image: gcr.io/heptio-images/ks-guestbook-demo:0.1
           name: guestbook-sales
           ports:
             - name: http
