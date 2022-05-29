@@ -7,7 +7,7 @@ buslog:
     tag: 696b07f
 ctrlr:
   image:
-    tag: 7abe01c
+    tag: ctrlr-update-dockerfile-44ea304
     # tag: main-4a28596
 flask-ui:
   image:
