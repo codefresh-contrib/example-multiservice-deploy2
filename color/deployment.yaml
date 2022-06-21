@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: color
+  name: color
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: color
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: color
+    spec:
+      containers:
+      - image: quay.io/codefresh_sa/color-service:hat
+        imagePullPolicy: Always
+        name: color-service
+        env:
+        - name: COLOR1
+          value: Tomato
+        resources: {}
+status: {}
